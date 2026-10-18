@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeShare — Code Together</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark border-bottom border-secondary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+          <span class="brand-icon">&lt;/&gt;</span> CodeShare
+        </a>
+        <span class="text-secondary small">Code together, anywhere.</span>
+      </div>
+    </nav>
+
+    <main class="container home-container">
+      <section class="hero text-center">
+        <div class="badge rounded-pill mb-3 hero-badge">
+          REAL-TIME COLLABORATIVE CODING
+        </div>
+
+        <h1 class="display-4 fw-bold">
+          Write code <span class="highlight">together.</span>
+        </h1>
+
+        <p class="lead text-secondary mt-3">
+          Create a room, share the link, and start coding with your team.
+        </p>
+      </section>
+
+      <section class="row justify-content-center g-4 mt-4">
+        <div class="col-12 col-md-5">
+          <div class="card app-card h-100">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">＋</div>
+              <h2 class="h4 fw-bold">Create a room</h2>
+              <p class="text-secondary">
+                Start a new coding session and invite others.
+              </p>
+
+              <button id="createRoomBtn" class="btn btn-primary w-100 mt-3">
+                Create room
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+          <div class="card app-card h-100">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">↗</div>
+              <h2 class="h4 fw-bold">Join a room</h2>
+              <p class="text-secondary">
+                Already have a room ID? Enter it below.
+              </p>
+
+              <form id="joinRoomForm" class="mt-3">
+                <label for="roomIdInput" class="form-label">
+                  Room ID
+                </label>
+                <input
+                  id="roomIdInput"
+                  class="form-control mb-3"
+                  type="text"
+                  placeholder="Enter room ID"
+                  required
+                  autocomplete="off"
+                />
+                <button class="btn btn-outline-light w-100" type="submit">
+                  Join room
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p id="message" class="text-center mt-4" role="status"></p>
+    </main>
+
+    <footer class="text-center text-secondary py-4 small">
+      Built for developers, by developers.
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

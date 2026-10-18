@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Room | CodeShare</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/room.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark border-bottom border-secondary">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand fw-bold" href="/">
+          <span class="brand-icon">&lt;/&gt;</span> CodeShare
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+          <span class="small text-secondary">
+            Room: <strong id="roomId"></strong>
+          </span>
+          <button id="copyLinkBtn" class="btn btn-sm btn-outline-light">
+            Copy invite link
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid p-3">
+      <div class="toolbar d-flex flex-wrap align-items-center gap-3 mb-3">
+        <label for="languageSelect" class="text-secondary">Language</label>
+        <select id="languageSelect" class="form-select form-select-sm">
+          <option value="javascript">JavaScript</option>
+          <option value="typescript">TypeScript</option>
+          <option value="python">Python</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="json">JSON</option>
+        </select>
+
+        <span class="text-secondary small ms-auto">
+          <span class="status-dot"></span>
+          <span id="connectionStatus">Connecting...</span>
+          · <span id="userCount">1</span> connected
+        </span>
+      </div>
+
+      <div id="editor" aria-label="Code editor"></div>
+
+      <div class="d-flex justify-content-between align-items-center mt-3">
+        <span id="editorMessage" class="text-secondary small">
+          Preparing editor...
+        </span>
+        <button id="downloadBtn" class="btn btn-sm btn-primary">
+          Download code
+        </button>
+      </div>
+    </main>
+
+    <script type="module" src="/src/room.js"></script>
+  </body>
+</html>
